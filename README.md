@@ -5,6 +5,6 @@
 </p>
 
 <h2 align="center">Overview </h2>
-Here is all my successful submissiong on Leetcode for Data Structures and Algorithm practice. Successful submissions are automatically pushed to this repository.
+Here is all my successful submissions on Leetcode for Data Structures and Algorithm practice. Successful submissions are automatically pushed to this repository.
 <br> <br/>
 To enable this for yourself, check out https://github.com/QasimWani/LeetHub
