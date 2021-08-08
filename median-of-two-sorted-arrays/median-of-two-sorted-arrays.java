@@ -10,9 +10,6 @@ class Solution {
             count++;
         }
         Arrays.sort(merged);
-        for(int i : merged) {
-            System.out.print(i + " ");
-        }
         if(merged.length%2 == 0) {
             int mid1 = merged[(merged.length / 2) - 1];
             int mid2 = merged[(merged.length / 2)];
@@ -22,7 +19,6 @@ class Solution {
         else {
             int mid = ((merged.length - 1) / 2);
             double median = merged[mid];
-            System.out.println("odd " + median);
             return median;
         }
     }
