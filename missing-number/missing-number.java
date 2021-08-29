@@ -1,41 +1,24 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        if(nums.length == 1) {
-            if(nums[0] != 1) {
-                int ans = nums[0] + 1;
-                return ans;
+        int i = 0; // iterator variable
+        while(i < nums.length) { // loop from start to end
+            int correct = nums[i];
+            // check if nums[i] is below length and not equal to index
+            if(nums[i] < nums.length && nums[i] != nums[correct]) { 
+                int temp = nums[i]; // swap
+                nums[i] = nums[correct];
+                nums[correct] = temp;
             }
-            return 0;
-            
-        }
-        // INFO: bubble sort
-        boolean swapped;
-        for(int i=0; i<nums.length; i++) {
-            swapped = false;
-            for(int j=1; j<nums.length-i; j++) {
-                if(nums[j] < nums[j-1]) {
-                    int temp = nums[j-1];
-                    nums[j-1] = nums[j];
-                    nums[j] = temp;
-                    swapped = true;
-                }
-            }
-            if(!swapped) {
-                break;
+            else {
+                i++;
             }
         }
         
-        System.out.println(Arrays.toString(nums));
-        int ans = nums[nums.length-1] + 1;
-        for(int k=1; k<nums.length; k++) {
-            if(nums[k] - nums[k-1] != 1) {
-                ans = nums[k-1] + 1; 
-                break;
-            }
-            if(nums[0] != 0) {
-                return 0;
+        for(int j=0; j<nums.length; j++) {
+            if(nums[j] != j) {
+                return j;
             }
         }
-        return ans;
+        return nums.length;
     }
 }
