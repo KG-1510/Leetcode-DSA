@@ -70,7 +70,6 @@ class Solution{
            }
            
            ptr -> next = nw;
-           nw -> next = NULL;
        }
        return head;
     }
