@@ -59,7 +59,6 @@ class Solution{
        if(head == NULL)
        {
            head = nw;
-           head -> next = NULL;
        }
        else
        {
